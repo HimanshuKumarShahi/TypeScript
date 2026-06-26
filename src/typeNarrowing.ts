@@ -92,15 +92,16 @@ function MakeChai(Order: Chai) {
   }
 }
 
+// function isStringArray(arr:unknown):arr is string[]{
 
-
+// }
 
 const myKulhad = new KulhadChai();
 const myCutting = new CuttingChai();
 
-console.log(serve(myKulhad));
+// console.log(serve(myKulhad));
 
-console.log(myCutting);
+// console.log(myCutting);
 
 const specialOrder: ChaiOrder = { type: "Elaichi", sugar: 2 };
 
