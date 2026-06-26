@@ -66,4 +66,24 @@ type User = {
 };
 
 const u1: User = { UserName: "Himanshu" };
+<<<<<<< HEAD
 const u2: User = { UserName: "ASUS" , bio:"Asus.com" };
+=======
+const u2: User = { UserName: "ASUS", bio: "Asus.com" };
+
+type Config = {
+  readonly appname: string;
+  version: number;
+  readonly features: string;
+};
+
+const cfg: Config = {
+  appname: "ASUS",
+  version: 1.0,
+  features: "Fast and Smart.",
+};
+
+// cfg.appname="MasterJi"
+cfg.version = 1.1;
+// cfg.features="Standard."
+>>>>>>> part-1
