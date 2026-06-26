@@ -56,12 +56,11 @@ function isChaiOrder(obj: any): obj is ChaiOrder {
   );
 }
 
-
-function serveOrder(item:ChaiOrder | string){
-    if(isChaiOrder(item)){
-       return `Serving ${item.type} chai with ${item.sugar} sugar ` 
-    }
-    return `Serving custom chai : ${item}`
+function serveOrder(item: ChaiOrder | string) {
+  if (isChaiOrder(item)) {
+    return `Serving ${item.type} chai with ${item.sugar} sugar `;
+  }
+  return `Serving custom chai : ${item}`;
 }
 
 console.log(getChai("Kulhad"));
@@ -70,3 +69,16 @@ console.log(ServeChai("masala"));
 console.log(ServeChai());
 console.log(OrderChai("Large"));
 console.log(OrderChai(32));
+
+const myKulhad = new KulhadChai();
+const myCutting = new CuttingChai();
+
+console.log(serve(myKulhad));
+
+console.log(myCutting);
+
+
+const specialOrder: ChaiOrder = { type: "Elaichi", sugar: 2 };
+console.log(serveOrder(specialOrder));
+
+console.log(serveOrder("Adrak Chai"));
