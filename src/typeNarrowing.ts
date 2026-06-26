@@ -63,3 +63,10 @@ function serveOrder(item:ChaiOrder | string){
     }
     return `Serving custom chai : ${item}`
 }
+
+console.log(getChai("Kulhad"));
+console.log(getChai(45));
+console.log(ServeChai("masala"));
+console.log(ServeChai());
+console.log(OrderChai("Large"));
+console.log(OrderChai(32));
