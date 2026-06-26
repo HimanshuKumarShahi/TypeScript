@@ -63,12 +63,37 @@ function serveOrder(item: ChaiOrder | string) {
   return `Serving custom chai : ${item}`;
 }
 
-console.log(getChai("Kulhad"));
-console.log(getChai(45));
-console.log(ServeChai("masala"));
-console.log(ServeChai());
-console.log(OrderChai("Large"));
-console.log(OrderChai(32));
+// console.log(getChai("Kulhad"));
+// console.log(getChai(45));
+// console.log(ServeChai("masala"));
+// console.log(ServeChai());
+// console.log(OrderChai("Large"));
+// console.log(OrderChai(32));
+
+type MasalaChai = { type: "masala"; spicelevel: number };
+type GingerChai = { type: "ginger"; amount: number };
+type ElaichiChai = { type: "elaichi"; aroma: number | string };
+
+type Chai = MasalaChai | GingerChai | ElaichiChai;
+
+function MakeChai(Order: Chai) {
+  switch (Order.type) {
+    case "masala":
+      return `Masala Chai .`;
+      break;
+
+    case "ginger":
+      return `Ginger Chai .`;
+      break;
+
+    case "elaichi":
+      return `Elaichi Chai .`;
+      break;
+  }
+}
+
+
+
 
 const myKulhad = new KulhadChai();
 const myCutting = new CuttingChai();
@@ -77,8 +102,8 @@ console.log(serve(myKulhad));
 
 console.log(myCutting);
 
-
 const specialOrder: ChaiOrder = { type: "Elaichi", sugar: 2 };
-console.log(serveOrder(specialOrder));
 
-console.log(serveOrder("Adrak Chai"));
+// console.log(serveOrder(specialOrder));
+
+// console.log(serveOrder("Adrak Chai"));
