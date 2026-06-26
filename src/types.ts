@@ -16,3 +16,7 @@ let book: string = "Ramayan";
 book = "HC verma";
 
 console.log(book);
+
+let islogin:boolean
+islogin=true
+console.log(islogin);
