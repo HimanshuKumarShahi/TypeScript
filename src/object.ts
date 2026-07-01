@@ -62,23 +62,45 @@ type User = {
   password: string;
 };
 
-const u1: User = {
-  username: "Himanshu",
+const u: User = {
+  username: "Boss",
   password: "123",
 };
 
-type Item = {
-  name: string;
-  quantity: number;
-};
-
-type Address = {
-  street: string;
-  pin: number;
-};
+type Item = { name: string; quantity: number };
+type Address = { Street: string; pin: number };
 
 type Order = {
   id: string;
-  items: Item[];
+  item: Item[];
   address: Address;
 };
+
+type Product = {
+  name: string;
+  price: number;
+  isHot: boolean;
+};
+
+const UpdateProduct = (updates: Partial<Product>) => {
+  console.log("Updating Chai With ", updates);
+};
+
+UpdateProduct({ price: 200 });
+UpdateProduct({ isHot: false });
+UpdateProduct({});
+
+type Buygoods = {
+  name?: string;
+  quantity?: number;
+};
+
+const BuyingProduct = (Buygoods: Required<Buygoods>) => {
+  console.log(BuyingProduct);
+};
+
+BuyingProduct({
+  name: "Books",
+  quantity: 5,
+});
+
